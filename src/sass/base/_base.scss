@@ -1,0 +1,83 @@
+/* ==|====================
+ * Base / Base
+ * ======================= */
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%; //10px
+	line-height: $text__line-height--base;
+	font-family: $text__family;
+	font-weight: $text__weight--base;
+	font-style: $text__style--base;
+	font-stretch: $text__stretch--base;
+	letter-spacing: $text__letter-spacing--base;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+
+	&:hover {
+		transition: $base__transition;
+	}
+}
+
+body {
+	background-color: $color__body;
+	color: $color-text;
+	font-family: $text__family;
+	font-size: $text__size--base;
+	line-height: $text__line-height--base;
+	overflow-x: hidden;
+	text-rendering: optimizeLegibility;
+}
+
+.container {
+	@include center--block;
+	width: 100%;
+	max-width: $container__max-width;
+	padding-right: 6rem;
+	padding-left: 6rem;
+}
+
+a {
+	display: inline-block;
+	background: transparent;
+	transition: $base__transition;
+}
+
+img {
+	display: inline-block;
+	height: auto;
+	max-width: 100%;
+}
+
+ul {
+	list-style: none;
+	font-size: 0;
+}
+
+button {
+	transition: all .3s;
+	cursor: pointer;
+}
+
+@include mq('tablet-wide', max) {
+	html {
+		font-size: 56%;
+	}
+
+	.container {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+}
+
+@include mq('tablet', max) {
+	html {
+		font-size: 50%;
+	}
+}

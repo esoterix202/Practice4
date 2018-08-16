@@ -1,0 +1,13 @@
+.main-content--home {
+
+	.background-photo {
+
+		&.home-tile-photo {
+			background-image: url('../images/tile-photo__home.png');
+		}
+	}
+
+	.tint-overlay {
+		background-color: rgba($color-background-invert, .4);
+	}
+}

@@ -1,0 +1,98 @@
+/* ==|====================
+ * Abstracts / Mixins
+ * ======================= */
+
+//absolute centering
+@mixin absolute-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+//-------------------------------------------
+// Center block element
+@mixin center--block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+//-------------------------------------------
+// Sizes --height is set to be same as width by default
+@mixin size($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+//-----------------------------------------------
+// Default pseudo content
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+	content: $content;
+	display: $display;
+	position: $pos;
+}
+
+//-------------------------------------------
+// Responsive ratio for video containers
+@mixin responsive-ratio($x, $y, $pseudo: false) {
+	$padding: unquote( ( $y / $x) * 100 + '%');
+	@if $pseudo {
+		&::before {
+			@include pseudo($pos: relative);
+			width: 100%;
+			padding-top: $padding;
+		}
+	}
+	@else {
+		padding-top: $padding;
+	}
+}
+
+// use this and div would have a ratio commonly utilised by video.
+// : div {
+//   @include responsive-ratio(16,9);
+// }
+//------------------------------------------------
+
+// Media Queries
+$breakpoints: ( 'phone': 20em, 'phablet': 30em, 'tablet-small': 40em, 'tablet': 48em, 'tablet-wide': 64em, 'laptop': 75em, 'laptop-wide': 90em);
+@mixin mq($width, $type: min) {
+	@if map-has-key($breakpoints, $width) {
+		$width: map-get($breakpoints, $width);
+		@if $type==max {
+			$width: $width - 0.03em;
+		}
+		@media only screen and (#{$type}-width: $width) {
+			@content;
+		}
+	}
+}
+
+//example-padding and font-size increasing once the viewport gets over 1024px:
+// .site-header {
+//   padding: 2rem;
+//   font-size: 1.8rem;
+//   @include mq('tablet-wide') {
+//       padding-top: 4rem;
+//       font-size: 2.4rem;
+//   }
+// }
+//-----------------------------------------------------------------------------------
+// Hardware acceleration for animations
+@mixin hardware($backface: true, $perspective: 1000) {
+	@if $backface {
+		backface-visibility: hidden;
+	}
+	perspective: $perspective;
+}
+
+// Text trunctation when resizing window
+@mixin truncate($truncation-boundary) {
+	max-width: $truncation-boundary;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+//---------------------------------------------------------

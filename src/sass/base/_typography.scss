@@ -1,0 +1,210 @@
+/* ==|====================
+ * Base / Typography
+ * ======================= */
+
+/* Headings |============= */
+
+h1 {
+	text-align: center;
+	font-size: $headings__size--h1;
+	font-weight: 300;
+	font-style: normal;
+	color: $color-heading--light;
+}
+
+h2 {
+	text-align: left;
+	font-size: $headings__size--h2;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 1.2;
+	color: $color-heading--dark;
+
+	&.accent {
+		color: $color-accent;
+	}
+}
+
+h3 {
+	font-size: $headings__size--h3;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 1.2;
+	color: $color-heading--dark;
+
+	&.accent--dark {
+		text-align: left;
+		color: $smoked-pearl;
+	}
+
+	&.accent--light {
+		text-align: left;
+		line-height: 1.15;
+		color: $white;
+	}
+}
+
+/* Paragraphs |============= */
+
+p {
+	margin: 0;
+	font-size: $text__size--base;
+	font-weight: 300;
+	font-style: normal;
+	line-height: 1.7;
+	text-align: left;
+	color: $color-text;
+
+	&.big {
+		font-size: 1.8rem;
+		font-weight: 400;
+
+		a {
+			font-size: inherit;
+			font-weight: 700;
+			font-style: normal;
+		}
+	}
+
+	&.bigger {
+		font-size: 2.2rem;
+		font-weight: 300;
+
+		a {
+			font-size: inherit;
+			font-weight: 600;
+			font-style: normal;
+		}
+	}
+
+	&.date {
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+
+	&.date--white {
+		font-size: 1.5rem;
+		font-weight: 300;
+		color: $white;
+	}
+}
+
+/* Links |================ */
+
+a {
+	text-decoration: none;
+	color: inherit;
+
+	&:hover,
+	&:focus {
+		color: $color-link--hover;
+	}
+
+	&:focus {
+		outline: 0;
+	}
+}
+
+/* Other |================== */
+
+header {
+	nav a {
+		font-size: 1.5rem;
+		font-weight: 600;
+		font-style: normal;
+		line-height: 1.6;
+		color: $color-tertiary;
+	}
+
+	input,
+	input::placeholder {
+		font-size: 3.6rem;
+		color: inherit;
+	}
+}
+
+main {
+	a {
+		font-size: 1.5rem;
+		font-weight: 600;
+		font-style: italic;
+		line-height: 2;
+
+		&.link--grey {
+			text-decoration: underline;
+		}
+
+		&.link--white {
+			display: inline;
+			text-decoration: underline;
+			color: $color-primary;
+		}
+
+		&.link--blue {
+			display: inline-block;
+			text-decoration: underline;
+			color: $color-link-tertiary;
+
+			&:hover {
+				color: $golden-poppy;
+			}
+		}
+
+		&:hover {
+			text-decoration-color: $color-secondary;
+		}
+	}
+
+	input,
+	input::placeholder {
+		font-size: 1.8rem;
+		font-weight: 600;
+		color: inherit;
+	}
+
+	form {
+
+		label {
+			font-size: 1.8rem;
+			font-weight: 300;
+			color: $color-tertiary;
+		}
+
+		input,
+		input::placeholder,
+		textarea,
+		textarea::placeholder {
+			font-size: 1.5rem;
+			font-weight: 600;
+			color: $color-secondary;
+		}
+
+
+	}
+}
+
+footer {
+	p {
+		font-size: 1.5rem;
+		line-height: 1.7;
+		color: $color-tertiary;
+	}
+
+	a,
+	.text--strong {
+		font-size: 1.5rem;
+		font-weight: 600;
+		line-height: 2;
+		color: $color-text-strong;
+	}
+
+	a:hover,
+	a:focus {
+		border-bottom: .1rem solid $color-text-strong;
+	}
+}
+
+input,
+input::placeholder {
+	color: $basalt-grey;
+}

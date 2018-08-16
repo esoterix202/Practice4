@@ -1,0 +1,21 @@
+.show {
+	visibility: visible;
+	opacity: 1;
+	transition-delay: .1s;
+}
+
+.icon--active {
+	border-bottom: .3rem solid $golden-poppy;
+	background-color: $lynx-white;
+	color: $sky-blue;
+}
+
+.button--active {
+	border: 1.5rem solid $golden-poppy;
+	box-shadow: 0px .1rem .2rem .1rem rgba($carbon, .9);
+	transition: $base__transition;
+
+	&:hover {
+		border: 1.5rem solid $golden-poppy;
+	}
+}

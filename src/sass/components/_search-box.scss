@@ -1,0 +1,68 @@
+.search-box {
+	display: flex;
+	width: 100%;
+	max-width: 55rem;
+	min-height: 6rem;
+	margin-bottom: 2rem;
+
+	input {
+		width: 80%;
+		padding-left: 2rem;
+		border: .1rem solid $color-border;
+		border-radius: $radius-border;
+		outline: none;
+	}
+
+	button {
+		margin-left: -.1rem;
+		padding: 1.5rem;
+		border: .1rem solid $color-border;
+		background: none;
+		background-color: $sky-blue;
+		font-size: 2.8rem;
+		color: $color-primary;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $golden-poppy;
+		}
+	}
+}
+
+.search-box--dropdown {
+	max-width: 100%;
+
+	input {
+		width: 100%;
+	}
+
+	button {
+		padding: 3rem 1.55rem;
+		border: solid .1rem $color-border;
+		background-color: $white;
+		color: $color-secondary;
+
+		&:hover,
+		&:focus {
+			border: solid .1rem $sky-blue;
+			background-color: $lynx-white;
+		}
+
+		&:active {
+			color: $sky-blue;
+		}
+	}
+}
+
+@include mq('tablet', max) {
+	.search-box--dropdown {
+
+		input {
+			margin-left: -.1rem;
+		}
+
+		button {
+			padding: 1.5rem 2.05rem;
+		}
+	}
+}

@@ -1,0 +1,63 @@
+/// ==|====================
+/// Abstracts/Variables
+/// =======================
+// Text |===============
+$text__family: 'Open Sans',
+sans-serif;
+$text__size--base: 62.5%; // => 10px
+$text__line-height--base: 1.2;
+$text__letter-spacing--base: normal;
+$text__weight--base: normal;
+$text__style--base: normal;
+$text__stretch--base: normal;
+//** Unit-less 'line-height' for use in components like buttons.
+$line-height--base: 1.428571429; // 20/14
+//** Computed "line-height" ('font-size' * 'line-height') for use with 'margin', 'padding', etc.
+$line-height--computed: floor(($text__size--base * $line-height--base)); // ~20px
+$base__transition: all .3s;
+// Headings |===========
+$headings__family: $text__family;
+$headings__weight: normal;
+$headings__size--h1: 8rem;
+$headings__size--h2: 4rem;
+$headings__size--h3: 2.8rem;
+// Z-Index |===========
+$zindex: ( over-all: 10000, overlay: 9000, dropdown: 8000, nav: 7000, header: 6000, footer: 5000, pseudo: 4000, default: 1, bottomless-pit: -10000);
+// Container |========
+$container__max-width: 128rem;
+//===================================================================================
+// Main Colors |=============
+$color-primary: $white;
+$color-secondary: $basalt-grey;
+$color-tertiary: $smoked-pearl;
+$color-accent: $purple-sapphire;
+$color-shadow: $basalt-grey;
+// Common colors
+$color-background: $white;
+$color-background-shade: $lynx-white;
+$color-background-invert: $carbon;
+$color-heading--light: $white;
+$color-heading--dark: $smoked-pearl;
+$color-text: $basalt-grey;
+$color-text-weak: $white;
+$color-text-strong: $carbon;
+$color-text-invert: $color-background;
+// Links
+$color-link-primary: $white;
+$color-link-secondary: $basalt-grey;
+$color-link-tertiary: $bright-navy-blue;
+$color-link--hover: $carbon;
+$color-link-decoration--hover: $carbon;
+$color-link--visited: $sky-blue;
+//border
+$color-border: $basalt-grey;
+$radius-border: .3rem;
+// Selections
+$color-selection: $bright-navy-blue;
+//overlays
+$overlay__black--lighter: rgba(0, 0, 0, .3);
+$overlay__black: rgba(0, 0, 0, .5);
+$overlay__black--darker: rgba(0, 0, 0, .8);
+$color__body: $white;
+
+

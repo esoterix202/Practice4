@@ -1,0 +1,24 @@
+	.button-primary {
+		margin: 2rem 0;
+		padding: 1.5rem 2rem;
+		border-radius: $radius-border;
+		background-color: $bright-navy-blue;
+		font-size: 1.8rem;
+		font-weight: 600;
+		font-style: normal;
+		line-height: 2.2;
+		color: $white;
+
+		&::after {
+			content: '\f054';
+      font-family: 'Font Awesome 5 Free';
+			font-size: 1.5rem;
+      margin-left: 1rem;
+		}
+
+		&:hover,
+		&:focus {
+			color: $color-primary;
+			background-color: $golden-poppy;
+		}
+	}
